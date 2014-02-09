@@ -45,7 +45,6 @@
             // 
             // gender
             // 
-            this.gender.DisplayMember = "0";
             this.gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gender.FormattingEnabled = true;

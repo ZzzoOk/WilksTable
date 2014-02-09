@@ -47,8 +47,8 @@
             this.tweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.squat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.succAttempt = new System.Windows.Forms.ToolStripMenuItem();
+            this.failAttempt = new System.Windows.Forms.ToolStripMenuItem();
             this.squat2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.squat3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.benchpress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,16 +60,36 @@
             this.ttotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tresult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coefficient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.file = new System.Windows.Forms.ToolStripMenuItem();
-            this.newTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.open = new System.Windows.Forms.ToolStripMenuItem();
-            this.save = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAs = new System.Windows.Forms.ToolStripMenuItem();
-            this.exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.newFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileAs = new System.Windows.Forms.ToolStripMenuItem();
             this.addRow = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRow = new System.Windows.Forms.ToolStripMenuItem();
             this.getResults = new System.Windows.Forms.ToolStripMenuItem();
+            this.categories = new System.Windows.Forms.ToolStripMenuItem();
+            this.mensCategories = new System.Windows.Forms.ToolStripMenuItem();
+            this.m53 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m59 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m66 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m74 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m83 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m93 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m105 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m120 = new System.Windows.Forms.ToolStripMenuItem();
+            this.m120p = new System.Windows.Forms.ToolStripMenuItem();
+            this.womensCategories = new System.Windows.Forms.ToolStripMenuItem();
+            this.w43 = new System.Windows.Forms.ToolStripMenuItem();
+            this.w47 = new System.Windows.Forms.ToolStripMenuItem();
+            this.w52 = new System.Windows.Forms.ToolStripMenuItem();
+            this.w57 = new System.Windows.Forms.ToolStripMenuItem();
+            this.w63 = new System.Windows.Forms.ToolStripMenuItem();
+            this.w72 = new System.Windows.Forms.ToolStripMenuItem();
+            this.w84 = new System.Windows.Forms.ToolStripMenuItem();
+            this.w84p = new System.Windows.Forms.ToolStripMenuItem();
             this.about = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -97,7 +117,8 @@
             this.deadlift3,
             this.ttotal,
             this.tresult,
-            this.Coefficient});
+            this.Coefficient,
+            this.gender});
             this.table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table.Location = new System.Drawing.Point(0, 24);
             this.table.Margin = new System.Windows.Forms.Padding(4);
@@ -110,6 +131,9 @@
             this.table.TabIndex = 0;
             this.table.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellEndEdit);
             this.table.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellMouseEnter);
+            this.table.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_Changed);
+            this.table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.table_Changed);
+            this.table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.table_Changed);
             // 
             // tname
             // 
@@ -140,24 +164,24 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
+            this.succAttempt,
+            this.failAttempt});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(142, 48);
             // 
-            // toolStripMenuItem1
+            // succAttempt
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
-            this.toolStripMenuItem1.Text = "Засчитан";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.succAttempt.Name = "succAttempt";
+            this.succAttempt.Size = new System.Drawing.Size(141, 22);
+            this.succAttempt.Text = "Засчитан";
+            this.succAttempt.Click += new System.EventHandler(this.setSuccAttempt_Click);
             // 
-            // toolStripMenuItem2
+            // failAttempt
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(141, 22);
-            this.toolStripMenuItem2.Text = "Не засчитан";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.failAttempt.Name = "failAttempt";
+            this.failAttempt.Size = new System.Drawing.Size(141, 22);
+            this.failAttempt.Text = "Не засчитан";
+            this.failAttempt.Click += new System.EventHandler(this.setFailAttempt_Click);
             // 
             // squat2
             // 
@@ -262,6 +286,13 @@
             this.Coefficient.Visible = false;
             this.Coefficient.Width = 108;
             // 
+            // gender
+            // 
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.Visible = false;
+            this.gender.Width = 85;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -269,6 +300,7 @@
             this.addRow,
             this.deleteRow,
             this.getResults,
+            this.categories,
             this.about});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -279,64 +311,63 @@
             // file
             // 
             this.file.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newTSMI,
-            this.open,
-            this.save,
-            this.saveAs,
-            this.exit});
+            this.newFile,
+            this.openFile,
+            this.saveFile,
+            this.saveFileAs});
             this.file.Name = "file";
             this.file.Size = new System.Drawing.Size(48, 20);
             this.file.Text = "Файл";
             // 
-            // newTSMI
+            // newFile
             // 
-            this.newTSMI.Name = "newTSMI";
-            this.newTSMI.Size = new System.Drawing.Size(162, 22);
-            this.newTSMI.Text = "Новый";
-            this.newTSMI.Click += new System.EventHandler(this.newTSMI_Click);
+            this.newFile.Name = "newFile";
+            this.newFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newFile.Size = new System.Drawing.Size(234, 22);
+            this.newFile.Text = "Новый";
+            this.newFile.Click += new System.EventHandler(this.newFile_Click);
             // 
-            // open
+            // openFile
             // 
-            this.open.Name = "open";
-            this.open.Size = new System.Drawing.Size(162, 22);
-            this.open.Text = "Открыть";
-            this.open.Click += new System.EventHandler(this.OpenTSMI_Click);
+            this.openFile.Name = "openFile";
+            this.openFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openFile.Size = new System.Drawing.Size(234, 22);
+            this.openFile.Text = "Открыть";
+            this.openFile.Click += new System.EventHandler(this.openFile_Click);
             // 
-            // save
+            // saveFile
             // 
-            this.save.Enabled = false;
-            this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(162, 22);
-            this.save.Text = "Сохранить";
-            this.save.Click += new System.EventHandler(this.SaveTSMI_Click);
+            this.saveFile.Enabled = false;
+            this.saveFile.Name = "saveFile";
+            this.saveFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveFile.Size = new System.Drawing.Size(234, 22);
+            this.saveFile.Text = "Сохранить";
+            this.saveFile.Click += new System.EventHandler(this.saveFile_Click);
             // 
-            // saveAs
+            // saveFileAs
             // 
-            this.saveAs.Name = "saveAs";
-            this.saveAs.Size = new System.Drawing.Size(162, 22);
-            this.saveAs.Text = "Сохранить как...";
-            this.saveAs.Click += new System.EventHandler(this.SaveAsTSMI_Click);
-            // 
-            // exit
-            // 
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(162, 22);
-            this.exit.Text = "Выход";
-            this.exit.Click += new System.EventHandler(this.ExitTSMI_Click);
+            this.saveFileAs.Name = "saveFileAs";
+            this.saveFileAs.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.saveFileAs.Size = new System.Drawing.Size(234, 22);
+            this.saveFileAs.Text = "Сохранить как...";
+            this.saveFileAs.Click += new System.EventHandler(this.saveFileAsTSMI_Click);
             // 
             // addRow
             // 
             this.addRow.Name = "addRow";
+            this.addRow.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.addRow.Size = new System.Drawing.Size(71, 20);
             this.addRow.Text = "Добавить";
-            this.addRow.Click += new System.EventHandler(this.AddTSMI_Click);
+            this.addRow.Click += new System.EventHandler(this.addRow_Click);
             // 
             // deleteRow
             // 
             this.deleteRow.Name = "deleteRow";
+            this.deleteRow.ShortcutKeys = System.Windows.Forms.Keys.Delete;
             this.deleteRow.Size = new System.Drawing.Size(63, 20);
             this.deleteRow.Text = "Удалить";
-            this.deleteRow.Click += new System.EventHandler(this.DeleteTSMI_Click);
+            this.deleteRow.Click += new System.EventHandler(this.deleteRow_Click);
             // 
             // getResults
             // 
@@ -345,12 +376,171 @@
             this.getResults.Text = "Расчитать результат";
             this.getResults.Click += new System.EventHandler(this.getResults_Click);
             // 
+            // categories
+            // 
+            this.categories.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mensCategories,
+            this.womensCategories});
+            this.categories.Name = "categories";
+            this.categories.Size = new System.Drawing.Size(76, 20);
+            this.categories.Text = "Категории";
+            // 
+            // mensCategories
+            // 
+            this.mensCategories.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.m53,
+            this.m59,
+            this.m66,
+            this.m74,
+            this.m83,
+            this.m93,
+            this.m105,
+            this.m120,
+            this.m120p});
+            this.mensCategories.Name = "mensCategories";
+            this.mensCategories.Size = new System.Drawing.Size(132, 22);
+            this.mensCategories.Text = "Мужчины";
+            // 
+            // m53
+            // 
+            this.m53.Name = "m53";
+            this.m53.Size = new System.Drawing.Size(100, 22);
+            this.m53.Text = "53";
+            this.m53.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m59
+            // 
+            this.m59.Name = "m59";
+            this.m59.Size = new System.Drawing.Size(100, 22);
+            this.m59.Text = "59";
+            this.m59.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m66
+            // 
+            this.m66.Name = "m66";
+            this.m66.Size = new System.Drawing.Size(100, 22);
+            this.m66.Text = "66";
+            this.m66.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m74
+            // 
+            this.m74.Name = "m74";
+            this.m74.Size = new System.Drawing.Size(100, 22);
+            this.m74.Text = "74";
+            this.m74.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m83
+            // 
+            this.m83.Name = "m83";
+            this.m83.Size = new System.Drawing.Size(100, 22);
+            this.m83.Text = "83";
+            this.m83.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m93
+            // 
+            this.m93.Name = "m93";
+            this.m93.Size = new System.Drawing.Size(100, 22);
+            this.m93.Text = "93";
+            this.m93.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m105
+            // 
+            this.m105.Name = "m105";
+            this.m105.Size = new System.Drawing.Size(100, 22);
+            this.m105.Text = "105";
+            this.m105.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m120
+            // 
+            this.m120.Name = "m120";
+            this.m120.Size = new System.Drawing.Size(100, 22);
+            this.m120.Text = "120";
+            this.m120.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // m120p
+            // 
+            this.m120p.Name = "m120p";
+            this.m120p.Size = new System.Drawing.Size(100, 22);
+            this.m120p.Text = "120+";
+            this.m120p.Click += new System.EventHandler(this.mensCat_Click);
+            // 
+            // womensCategories
+            // 
+            this.womensCategories.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.w43,
+            this.w47,
+            this.w52,
+            this.w57,
+            this.w63,
+            this.w72,
+            this.w84,
+            this.w84p});
+            this.womensCategories.Name = "womensCategories";
+            this.womensCategories.Size = new System.Drawing.Size(132, 22);
+            this.womensCategories.Text = "Женщины";
+            // 
+            // w43
+            // 
+            this.w43.Name = "w43";
+            this.w43.Size = new System.Drawing.Size(94, 22);
+            this.w43.Text = "43";
+            this.w43.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // w47
+            // 
+            this.w47.Name = "w47";
+            this.w47.Size = new System.Drawing.Size(94, 22);
+            this.w47.Text = "47";
+            this.w47.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // w52
+            // 
+            this.w52.Name = "w52";
+            this.w52.Size = new System.Drawing.Size(94, 22);
+            this.w52.Text = "52";
+            this.w52.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // w57
+            // 
+            this.w57.Name = "w57";
+            this.w57.Size = new System.Drawing.Size(94, 22);
+            this.w57.Text = "57";
+            this.w57.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // w63
+            // 
+            this.w63.Name = "w63";
+            this.w63.Size = new System.Drawing.Size(94, 22);
+            this.w63.Text = "63";
+            this.w63.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // w72
+            // 
+            this.w72.Name = "w72";
+            this.w72.Size = new System.Drawing.Size(94, 22);
+            this.w72.Text = "72";
+            this.w72.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // w84
+            // 
+            this.w84.Name = "w84";
+            this.w84.Size = new System.Drawing.Size(94, 22);
+            this.w84.Text = "84";
+            this.w84.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // w84p
+            // 
+            this.w84p.Name = "w84p";
+            this.w84p.Size = new System.Drawing.Size(94, 22);
+            this.w84p.Text = "84+";
+            this.w84p.Click += new System.EventHandler(this.womensCat_Click);
+            // 
             // about
             // 
             this.about.Name = "about";
             this.about.Size = new System.Drawing.Size(94, 20);
             this.about.Text = "О программе";
-            this.about.Click += new System.EventHandler(this.AboutTSMI_Click);
+            this.about.Click += new System.EventHandler(this.about_Click);
             // 
             // saveFileDialog1
             // 
@@ -387,21 +577,40 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem file;
-        private System.Windows.Forms.ToolStripMenuItem open;
-        private System.Windows.Forms.ToolStripMenuItem save;
-        private System.Windows.Forms.ToolStripMenuItem saveAs;
+        private System.Windows.Forms.ToolStripMenuItem openFile;
+        private System.Windows.Forms.ToolStripMenuItem saveFile;
+        private System.Windows.Forms.ToolStripMenuItem saveFileAs;
         private System.Windows.Forms.ToolStripMenuItem addRow;
         private System.Windows.Forms.DataGridView table;
-        private System.Windows.Forms.ToolStripMenuItem exit;
         private System.Windows.Forms.ToolStripMenuItem about;
         private System.Windows.Forms.ToolStripMenuItem deleteRow;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ToolStripMenuItem newTSMI;
+        private System.Windows.Forms.ToolStripMenuItem newFile;
         private System.Windows.Forms.ToolStripMenuItem getResults;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem succAttempt;
+        private System.Windows.Forms.ToolStripMenuItem failAttempt;
+        private System.Windows.Forms.ToolStripMenuItem categories;
+        private System.Windows.Forms.ToolStripMenuItem mensCategories;
+        private System.Windows.Forms.ToolStripMenuItem m53;
+        private System.Windows.Forms.ToolStripMenuItem m59;
+        private System.Windows.Forms.ToolStripMenuItem m66;
+        private System.Windows.Forms.ToolStripMenuItem m74;
+        private System.Windows.Forms.ToolStripMenuItem m83;
+        private System.Windows.Forms.ToolStripMenuItem m93;
+        private System.Windows.Forms.ToolStripMenuItem m105;
+        private System.Windows.Forms.ToolStripMenuItem m120;
+        private System.Windows.Forms.ToolStripMenuItem m120p;
+        private System.Windows.Forms.ToolStripMenuItem womensCategories;
+        private System.Windows.Forms.ToolStripMenuItem w43;
+        private System.Windows.Forms.ToolStripMenuItem w47;
+        private System.Windows.Forms.ToolStripMenuItem w52;
+        private System.Windows.Forms.ToolStripMenuItem w57;
+        private System.Windows.Forms.ToolStripMenuItem w63;
+        private System.Windows.Forms.ToolStripMenuItem w72;
+        private System.Windows.Forms.ToolStripMenuItem w84;
+        private System.Windows.Forms.ToolStripMenuItem w84p;
         private System.Windows.Forms.DataGridViewTextBoxColumn tname;
         private System.Windows.Forms.DataGridViewTextBoxColumn tweight;
         private System.Windows.Forms.DataGridViewTextBoxColumn squat1;
@@ -416,6 +625,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ttotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn tresult;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coefficient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
 
     }
 }

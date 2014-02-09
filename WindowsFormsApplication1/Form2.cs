@@ -10,17 +10,19 @@ namespace WilksTable
 {
     public partial class Form2 : Form
     {
-        public string GetName { get { return name.Text; } }
+        public string getName { get { return name.Text; } }
 
-        public double GetWeight { get { return double.Parse(weight.Text); } }
+        public double getWeight { get { return double.Parse(weight.Text); } }
 
-        public double GetSquat { get { return double.Parse(squat.Text); } }
+        public double getSquat { get { return double.Parse(squat.Text); } }
 
-        public double GetBench { get { return double.Parse(benchPress.Text); } }
+        public double getBench { get { return double.Parse(benchPress.Text); } }
 
-        public double GetDead { get { return double.Parse(deadlift.Text); } }
+        public double getDead { get { return double.Parse(deadlift.Text); } }
 
-        public double Coefficient; public bool isCalculated = false;
+        public string getGender { get { return gender.SelectedIndex == 0 ? "м" : "ж"; } }
+
+        public double coefficient; public bool isCalculated = false;
 
         public Form2()
         {
@@ -37,8 +39,8 @@ namespace WilksTable
                 a = 594.31747775582; b = -27.23842536447; c = 0.82112226871; d = -0.00930733913; e = 0.00004731582; f = -0.00000009054;
             }
             
-            Coefficient = 500 / (a + b * x + c * (x * x) + d * (x * x * x) + e * (x * x * x * x) + f * (x * x * x * x * x));
-            Coefficient = Math.Round(Coefficient, 4);
+            coefficient = 500 / (a + b * x + c * (x * x) + d * (x * x * x) + e * (x * x * x * x) + f * (x * x * x * x * x));
+            coefficient = Math.Round(coefficient, 4);
             isCalculated = true;
             this.Close();
         }
