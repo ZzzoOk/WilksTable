@@ -22,23 +22,29 @@ namespace WilksTable
 
         public string getGender { get { return gender.SelectedIndex == 0 ? "м" : "ж"; } }
 
+        public string getTeam { get { return team.Text; } }
+
         public double coefficient; public bool isCalculated = false;
 
-        public Form2()
+        public Form2(List<string> teams)
         {
             InitializeComponent();
             gender.SelectedIndex = 0;
+
+            team.Items.Clear();
+            foreach (string t in teams)
+                team.Items.Add(t);
         }
-        
+
         public void button1_Click(object sender, EventArgs ee)
         {
             double a = -216.0475144, b = 16.2606339, c = -0.002388645, d = -0.00113732, e = 7.01863E-06, f = -1.291E-08, x = double.Parse(weight.Text);
-            
+
             if (gender.SelectedIndex == 1)
             {
                 a = 594.31747775582; b = -27.23842536447; c = 0.82112226871; d = -0.00930733913; e = 0.00004731582; f = -0.00000009054;
             }
-            
+
             coefficient = 500 / (a + b * x + c * (x * x) + d * (x * x * x) + e * (x * x * x * x) + f * (x * x * x * x * x));
             coefficient = Math.Round(coefficient, 4);
             isCalculated = true;
@@ -115,10 +121,6 @@ namespace WilksTable
             {
                 e.KeyChar = ',';
             }
-            if ((e.KeyChar == (char)13) && (button1.Enabled))
-            {
-                button1_Click(sender, e);
-            }
         }
 
         private void squat_KeyPress(object sender, KeyPressEventArgs e)
@@ -130,10 +132,6 @@ namespace WilksTable
             if (e.KeyChar == '.')
             {
                 e.KeyChar = ',';
-            }
-            if ((e.KeyChar == (char)13) && (button1.Enabled))
-            {
-                button1_Click(sender, e);
             }
         }
 
@@ -147,10 +145,6 @@ namespace WilksTable
             {
                 e.KeyChar = ',';
             }
-            if ((e.KeyChar == (char)13) && (button1.Enabled))
-            {
-                button1_Click(sender, e);
-            }
         }
 
         private void deadlift_KeyPress(object sender, KeyPressEventArgs e)
@@ -163,10 +157,12 @@ namespace WilksTable
             {
                 e.KeyChar = ',';
             }
-            if ((e.KeyChar == (char)13) && (button1.Enabled))
-            {
-                button1_Click(sender, e);
-            }
+        }
+
+        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
         }
     }
 }
