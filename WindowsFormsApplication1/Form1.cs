@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using GemBox.Spreadsheet;
 
@@ -311,7 +308,7 @@ namespace WilksTable
                         }
 
                     if (n > 0)
-                        info += string.Format("{0,-30}\t{1,12}\t{2,12:N2}\t\n", s, n, d);
+                        info += string.Format("{0,-30}\t{1,30}\t{2,12:N2}\t\n", s, n, d);
                 }
 
                 MessageBox.Show(info);
@@ -328,7 +325,7 @@ Ctrl+N — добавить спортсмена
 Delete — удалить выделенного спортсмена
 
 
-Программа написана специально для СК «ОЛИМП».
+Программа написана специально для секции пауэрлифтинга МГТУ им. Н.Э. Баумана
 
 Репозиторий на GitHub: github.com/ZzzoOk/WilksTable", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

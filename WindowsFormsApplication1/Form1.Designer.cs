@@ -91,11 +91,11 @@
             this.w72 = new System.Windows.Forms.ToolStripMenuItem();
             this.w84 = new System.Windows.Forms.ToolStripMenuItem();
             this.w84p = new System.Windows.Forms.ToolStripMenuItem();
+            this.teamResult = new System.Windows.Forms.ToolStripMenuItem();
             this.about = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.teamResult = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -129,7 +129,6 @@
             this.table.Margin = new System.Windows.Forms.Padding(4);
             this.table.MultiSelect = false;
             this.table.Name = "table";
-            this.table.RowHeadersVisible = false;
             this.table.RowTemplate.DefaultCellStyle.Format = "#,##0.####";
             this.table.RowTemplate.DefaultCellStyle.NullValue = null;
             this.table.Size = new System.Drawing.Size(884, 338);
@@ -426,63 +425,63 @@
             // m53
             // 
             this.m53.Name = "m53";
-            this.m53.Size = new System.Drawing.Size(152, 22);
+            this.m53.Size = new System.Drawing.Size(100, 22);
             this.m53.Text = "53";
             this.m53.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m59
             // 
             this.m59.Name = "m59";
-            this.m59.Size = new System.Drawing.Size(152, 22);
+            this.m59.Size = new System.Drawing.Size(100, 22);
             this.m59.Text = "59";
             this.m59.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m66
             // 
             this.m66.Name = "m66";
-            this.m66.Size = new System.Drawing.Size(152, 22);
+            this.m66.Size = new System.Drawing.Size(100, 22);
             this.m66.Text = "66";
             this.m66.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m74
             // 
             this.m74.Name = "m74";
-            this.m74.Size = new System.Drawing.Size(152, 22);
+            this.m74.Size = new System.Drawing.Size(100, 22);
             this.m74.Text = "74";
             this.m74.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m83
             // 
             this.m83.Name = "m83";
-            this.m83.Size = new System.Drawing.Size(152, 22);
+            this.m83.Size = new System.Drawing.Size(100, 22);
             this.m83.Text = "83";
             this.m83.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m93
             // 
             this.m93.Name = "m93";
-            this.m93.Size = new System.Drawing.Size(152, 22);
+            this.m93.Size = new System.Drawing.Size(100, 22);
             this.m93.Text = "93";
             this.m93.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m105
             // 
             this.m105.Name = "m105";
-            this.m105.Size = new System.Drawing.Size(152, 22);
+            this.m105.Size = new System.Drawing.Size(100, 22);
             this.m105.Text = "105";
             this.m105.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m120
             // 
             this.m120.Name = "m120";
-            this.m120.Size = new System.Drawing.Size(152, 22);
+            this.m120.Size = new System.Drawing.Size(100, 22);
             this.m120.Text = "120";
             this.m120.Click += new System.EventHandler(this.mensCat_Click);
             // 
             // m120p
             // 
             this.m120p.Name = "m120p";
-            this.m120p.Size = new System.Drawing.Size(152, 22);
+            this.m120p.Size = new System.Drawing.Size(100, 22);
             this.m120p.Text = "120+";
             this.m120p.Click += new System.EventHandler(this.mensCat_Click);
             // 
@@ -505,58 +504,65 @@
             // w43
             // 
             this.w43.Name = "w43";
-            this.w43.Size = new System.Drawing.Size(152, 22);
+            this.w43.Size = new System.Drawing.Size(94, 22);
             this.w43.Text = "43";
             this.w43.Click += new System.EventHandler(this.womensCat_Click);
             // 
             // w47
             // 
             this.w47.Name = "w47";
-            this.w47.Size = new System.Drawing.Size(152, 22);
+            this.w47.Size = new System.Drawing.Size(94, 22);
             this.w47.Text = "47";
             this.w47.Click += new System.EventHandler(this.womensCat_Click);
             // 
             // w52
             // 
             this.w52.Name = "w52";
-            this.w52.Size = new System.Drawing.Size(152, 22);
+            this.w52.Size = new System.Drawing.Size(94, 22);
             this.w52.Text = "52";
             this.w52.Click += new System.EventHandler(this.womensCat_Click);
             // 
             // w57
             // 
             this.w57.Name = "w57";
-            this.w57.Size = new System.Drawing.Size(152, 22);
+            this.w57.Size = new System.Drawing.Size(94, 22);
             this.w57.Text = "57";
             this.w57.Click += new System.EventHandler(this.womensCat_Click);
             // 
             // w63
             // 
             this.w63.Name = "w63";
-            this.w63.Size = new System.Drawing.Size(152, 22);
+            this.w63.Size = new System.Drawing.Size(94, 22);
             this.w63.Text = "63";
             this.w63.Click += new System.EventHandler(this.womensCat_Click);
             // 
             // w72
             // 
             this.w72.Name = "w72";
-            this.w72.Size = new System.Drawing.Size(152, 22);
+            this.w72.Size = new System.Drawing.Size(94, 22);
             this.w72.Text = "72";
             this.w72.Click += new System.EventHandler(this.womensCat_Click);
             // 
             // w84
             // 
             this.w84.Name = "w84";
-            this.w84.Size = new System.Drawing.Size(152, 22);
+            this.w84.Size = new System.Drawing.Size(94, 22);
             this.w84.Text = "84";
             this.w84.Click += new System.EventHandler(this.womensCat_Click);
             // 
             // w84p
             // 
             this.w84p.Name = "w84p";
-            this.w84p.Size = new System.Drawing.Size(152, 22);
+            this.w84p.Size = new System.Drawing.Size(94, 22);
             this.w84p.Text = "84+";
             this.w84p.Click += new System.EventHandler(this.womensCat_Click);
+            // 
+            // teamResult
+            // 
+            this.teamResult.Name = "teamResult";
+            this.teamResult.Size = new System.Drawing.Size(140, 20);
+            this.teamResult.Text = "Командный результат";
+            this.teamResult.Click += new System.EventHandler(this.teamResult_Click);
             // 
             // about
             // 
@@ -578,13 +584,6 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             this.contextMenuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip2_ItemClicked);
-            // 
-            // teamResult
-            // 
-            this.teamResult.Name = "teamResult";
-            this.teamResult.Size = new System.Drawing.Size(140, 20);
-            this.teamResult.Text = "Командный результат";
-            this.teamResult.Click += new System.EventHandler(this.teamResult_Click);
             // 
             // Form1
             // 
