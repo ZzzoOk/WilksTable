@@ -43,25 +43,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table = new System.Windows.Forms.DataGridView();
-            this.tName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tSquat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Team = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Squat1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.succAttempt = new System.Windows.Forms.ToolStripMenuItem();
             this.failAttempt = new System.Windows.Forms.ToolStripMenuItem();
-            this.tSquat2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tSquat3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tBenchpress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tBenchpress2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tBenchpress3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tDeadlift1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tDeadlift2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tDeadlift3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCoefficient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Squat2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Squat3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Benchpress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Benchpress2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Benchpress3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deadlift1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deadlift2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deadlift3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coefficient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Group = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.file = new System.Windows.Forms.ToolStripMenuItem();
             this.newFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +72,9 @@
             this.addRow = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRow = new System.Windows.Forms.ToolStripMenuItem();
             this.getResults = new System.Windows.Forms.ToolStripMenuItem();
+            this.groups = new System.Windows.Forms.ToolStripMenuItem();
+            this.newGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.mergeGroups = new System.Windows.Forms.ToolStripMenuItem();
             this.categories = new System.Windows.Forms.ToolStripMenuItem();
             this.mensCategories = new System.Windows.Forms.ToolStripMenuItem();
             this.m53 = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,22 +112,23 @@
             this.table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tName,
-            this.tWeight,
-            this.tTeam,
-            this.tSquat1,
-            this.tSquat2,
-            this.tSquat3,
-            this.tBenchpress1,
-            this.tBenchpress2,
-            this.tBenchpress3,
-            this.tDeadlift1,
-            this.tDeadlift2,
-            this.tDeadlift3,
-            this.tTotal,
-            this.tResult,
-            this.tCoefficient,
-            this.tGender});
+            this.Name1,
+            this.Weight,
+            this.Team,
+            this.Squat1,
+            this.Squat2,
+            this.Squat3,
+            this.Benchpress1,
+            this.Benchpress2,
+            this.Benchpress3,
+            this.Deadlift1,
+            this.Deadlift2,
+            this.Deadlift3,
+            this.Total,
+            this.Result,
+            this.Coefficient,
+            this.Gender,
+            this.Group});
             this.table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table.Location = new System.Drawing.Point(0, 24);
             this.table.Margin = new System.Windows.Forms.Padding(4);
@@ -140,38 +145,38 @@
             this.table.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.table_RowsAdded);
             this.table.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.table_RowsRemoved);
             // 
-            // tName
+            // Name1
             // 
-            this.tName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tName.HeaderText = "Имя";
-            this.tName.Name = "tName";
-            this.tName.Width = 63;
+            this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Name1.HeaderText = "Имя";
+            this.Name1.Name = "Name1";
+            this.Name1.Width = 63;
             // 
-            // tWeight
+            // Weight
             // 
-            this.tWeight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Weight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle1.Format = "N2";
             dataGridViewCellStyle1.NullValue = null;
-            this.tWeight.DefaultCellStyle = dataGridViewCellStyle1;
-            this.tWeight.HeaderText = "Вес";
-            this.tWeight.Name = "tWeight";
-            this.tWeight.ReadOnly = true;
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Weight.HeaderText = "Вес";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
             // 
-            // tTeam
+            // Team
             // 
-            this.tTeam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tTeam.HeaderText = "Команда";
-            this.tTeam.Name = "tTeam";
+            this.Team.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Team.HeaderText = "Команда";
+            this.Team.Name = "Team";
             // 
-            // tSquat1
+            // Squat1
             // 
-            this.tSquat1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tSquat1.ContextMenuStrip = this.contextMenuStrip1;
+            this.Squat1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Squat1.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle2.Format = "N2";
             dataGridViewCellStyle2.NullValue = null;
-            this.tSquat1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tSquat1.HeaderText = "Приседания";
-            this.tSquat1.Name = "tSquat1";
+            this.Squat1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Squat1.HeaderText = "Приседания";
+            this.Squat1.Name = "Squat1";
             // 
             // contextMenuStrip1
             // 
@@ -195,122 +200,128 @@
             this.failAttempt.Text = "Не засчитан";
             this.failAttempt.Click += new System.EventHandler(this.setFailAttempt_Click);
             // 
-            // tSquat2
+            // Squat2
             // 
-            this.tSquat2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tSquat2.ContextMenuStrip = this.contextMenuStrip1;
+            this.Squat2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Squat2.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle3.Format = "N2";
-            this.tSquat2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tSquat2.FillWeight = 50F;
-            this.tSquat2.HeaderText = "2";
-            this.tSquat2.Name = "tSquat2";
+            this.Squat2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Squat2.FillWeight = 50F;
+            this.Squat2.HeaderText = "2";
+            this.Squat2.Name = "Squat2";
             // 
-            // tSquat3
+            // Squat3
             // 
-            this.tSquat3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tSquat3.ContextMenuStrip = this.contextMenuStrip1;
+            this.Squat3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Squat3.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle4.Format = "N2";
-            this.tSquat3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.tSquat3.FillWeight = 50F;
-            this.tSquat3.HeaderText = "3";
-            this.tSquat3.Name = "tSquat3";
+            this.Squat3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Squat3.FillWeight = 50F;
+            this.Squat3.HeaderText = "3";
+            this.Squat3.Name = "Squat3";
             // 
-            // tBenchpress1
+            // Benchpress1
             // 
-            this.tBenchpress1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tBenchpress1.ContextMenuStrip = this.contextMenuStrip1;
+            this.Benchpress1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Benchpress1.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle5.Format = "N2";
-            this.tBenchpress1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.tBenchpress1.HeaderText = "Жим";
-            this.tBenchpress1.Name = "tBenchpress1";
+            this.Benchpress1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Benchpress1.HeaderText = "Жим";
+            this.Benchpress1.Name = "Benchpress1";
             // 
-            // tBenchpress2
+            // Benchpress2
             // 
-            this.tBenchpress2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tBenchpress2.ContextMenuStrip = this.contextMenuStrip1;
+            this.Benchpress2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Benchpress2.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle6.Format = "N2";
-            this.tBenchpress2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.tBenchpress2.FillWeight = 50F;
-            this.tBenchpress2.HeaderText = "2";
-            this.tBenchpress2.Name = "tBenchpress2";
+            this.Benchpress2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Benchpress2.FillWeight = 50F;
+            this.Benchpress2.HeaderText = "2";
+            this.Benchpress2.Name = "Benchpress2";
             // 
-            // tBenchpress3
+            // Benchpress3
             // 
-            this.tBenchpress3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tBenchpress3.ContextMenuStrip = this.contextMenuStrip1;
+            this.Benchpress3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Benchpress3.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle7.Format = "N2";
-            this.tBenchpress3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.tBenchpress3.FillWeight = 50F;
-            this.tBenchpress3.HeaderText = "3";
-            this.tBenchpress3.Name = "tBenchpress3";
+            this.Benchpress3.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Benchpress3.FillWeight = 50F;
+            this.Benchpress3.HeaderText = "3";
+            this.Benchpress3.Name = "Benchpress3";
             // 
-            // tDeadlift1
+            // Deadlift1
             // 
-            this.tDeadlift1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tDeadlift1.ContextMenuStrip = this.contextMenuStrip1;
+            this.Deadlift1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Deadlift1.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle8.Format = "N2";
-            this.tDeadlift1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.tDeadlift1.HeaderText = "Тяга";
-            this.tDeadlift1.Name = "tDeadlift1";
+            this.Deadlift1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Deadlift1.HeaderText = "Тяга";
+            this.Deadlift1.Name = "Deadlift1";
             // 
-            // tDeadlift2
+            // Deadlift2
             // 
-            this.tDeadlift2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tDeadlift2.ContextMenuStrip = this.contextMenuStrip1;
+            this.Deadlift2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Deadlift2.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle9.Format = "N2";
-            this.tDeadlift2.DefaultCellStyle = dataGridViewCellStyle9;
-            this.tDeadlift2.FillWeight = 50F;
-            this.tDeadlift2.HeaderText = "2";
-            this.tDeadlift2.Name = "tDeadlift2";
+            this.Deadlift2.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Deadlift2.FillWeight = 50F;
+            this.Deadlift2.HeaderText = "2";
+            this.Deadlift2.Name = "Deadlift2";
             // 
-            // tDeadlift3
+            // Deadlift3
             // 
-            this.tDeadlift3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tDeadlift3.ContextMenuStrip = this.contextMenuStrip1;
+            this.Deadlift3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Deadlift3.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle10.Format = "N2";
-            this.tDeadlift3.DefaultCellStyle = dataGridViewCellStyle10;
-            this.tDeadlift3.FillWeight = 50F;
-            this.tDeadlift3.HeaderText = "3";
-            this.tDeadlift3.Name = "tDeadlift3";
+            this.Deadlift3.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Deadlift3.FillWeight = 50F;
+            this.Deadlift3.HeaderText = "3";
+            this.Deadlift3.Name = "Deadlift3";
             // 
-            // tTotal
+            // Total
             // 
-            this.tTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle11.Format = "N2";
             dataGridViewCellStyle11.NullValue = null;
-            this.tTotal.DefaultCellStyle = dataGridViewCellStyle11;
-            this.tTotal.HeaderText = "Сумма";
-            this.tTotal.Name = "tTotal";
-            this.tTotal.ReadOnly = true;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Total.HeaderText = "Сумма";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
-            // tResult
+            // Result
             // 
-            this.tResult.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Result.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle12.Format = "N4";
-            dataGridViewCellStyle12.NullValue = null;
-            this.tResult.DefaultCellStyle = dataGridViewCellStyle12;
-            this.tResult.HeaderText = "Результат";
-            this.tResult.Name = "tResult";
-            this.tResult.ReadOnly = true;
+            this.Result.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Result.HeaderText = "Результат";
+            this.Result.Name = "Result";
+            this.Result.ReadOnly = true;
             // 
-            // tCoefficient
+            // Coefficient
             // 
-            this.tCoefficient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Coefficient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle13.Format = "N4";
             dataGridViewCellStyle13.NullValue = null;
-            this.tCoefficient.DefaultCellStyle = dataGridViewCellStyle13;
-            this.tCoefficient.HeaderText = "Коэффициент";
-            this.tCoefficient.Name = "tCoefficient";
-            this.tCoefficient.ReadOnly = true;
-            this.tCoefficient.Visible = false;
+            this.Coefficient.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Coefficient.HeaderText = "Коэффициент";
+            this.Coefficient.Name = "Coefficient";
+            this.Coefficient.ReadOnly = true;
+            this.Coefficient.Visible = false;
             // 
-            // tGender
+            // Gender
             // 
-            this.tGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tGender.HeaderText = "Пол";
-            this.tGender.Name = "tGender";
-            this.tGender.ReadOnly = true;
-            this.tGender.Visible = false;
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gender.HeaderText = "Пол";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            this.Gender.Visible = false;
+            // 
+            // Group
+            // 
+            this.Group.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Group.HeaderText = "Поток";
+            this.Group.Name = "Group";
+            this.Group.Visible = false;
             // 
             // menuStrip1
             // 
@@ -319,6 +330,7 @@
             this.addRow,
             this.deleteRow,
             this.getResults,
+            this.groups,
             this.categories,
             this.teamResult,
             this.about});
@@ -396,6 +408,30 @@
             this.getResults.Text = "Расчитать результат";
             this.getResults.Click += new System.EventHandler(this.getResults_Click);
             // 
+            // groups
+            // 
+            this.groups.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newGroup,
+            this.mergeGroups});
+            this.groups.Name = "groups";
+            this.groups.Size = new System.Drawing.Size(60, 20);
+            this.groups.Text = "Потоки";
+            // 
+            // newGroup
+            // 
+            this.newGroup.Name = "newGroup";
+            this.newGroup.Size = new System.Drawing.Size(152, 22);
+            this.newGroup.Text = "Новый";
+            this.newGroup.Click += new System.EventHandler(this.newGroup_Click);
+            // 
+            // mergeGroups
+            // 
+            this.mergeGroups.Name = "mergeGroups";
+            this.mergeGroups.Size = new System.Drawing.Size(152, 22);
+            this.mergeGroups.Text = "Объединить";
+            this.mergeGroups.Visible = false;
+            this.mergeGroups.Click += new System.EventHandler(this.mergeGroups_Click);
+            // 
             // categories
             // 
             this.categories.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -418,7 +454,7 @@
             this.m120,
             this.m120p});
             this.mensCategories.Name = "mensCategories";
-            this.mensCategories.Size = new System.Drawing.Size(152, 22);
+            this.mensCategories.Size = new System.Drawing.Size(132, 22);
             this.mensCategories.Text = "Мужчины";
             this.mensCategories.Click += new System.EventHandler(this.mensCategories_Click);
             // 
@@ -497,7 +533,7 @@
             this.w84,
             this.w84p});
             this.womensCategories.Name = "womensCategories";
-            this.womensCategories.Size = new System.Drawing.Size(152, 22);
+            this.womensCategories.Size = new System.Drawing.Size(132, 22);
             this.womensCategories.Text = "Женщины";
             this.womensCategories.Click += new System.EventHandler(this.womensCategories_Click);
             // 
@@ -647,24 +683,27 @@
         private System.Windows.Forms.ToolStripMenuItem w84;
         private System.Windows.Forms.ToolStripMenuItem w84p;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tWeight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tTeam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tSquat1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tSquat2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tSquat3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tBenchpress1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tBenchpress2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tBenchpress3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tDeadlift1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tDeadlift2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tDeadlift3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tResult;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tCoefficient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tGender;
         private System.Windows.Forms.ToolStripMenuItem teamResult;
-
+        private System.Windows.Forms.ToolStripMenuItem groups;
+        private System.Windows.Forms.ToolStripMenuItem newGroup;
+        private System.Windows.Forms.ToolStripMenuItem mergeGroups;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Team;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Squat1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Squat2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Squat3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Benchpress1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Benchpress2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Benchpress3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deadlift1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deadlift2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deadlift3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Result;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coefficient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Group;
     }
 }
 
